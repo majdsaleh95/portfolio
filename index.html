@@ -81,6 +81,27 @@
   vertical-align: middle;
 }
 
+.testimonial-box{
+  height: 45vh;
+}
+
+.title{
+  font-size:35px;
+}
+.footer-link{
+  margin-left:40vw;
+}
+@media only screen and (max-width: 767px) {
+  .testimonial-box{
+  height: 80vh;
+}
+.title{
+  font-size:20px;
+}
+.footer-link{
+  margin-left:20vw;
+}
+}
       </style>
     </head>
     <body>
@@ -164,6 +185,8 @@
               <!-- Add Arrows -->
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination-first" style="text-align: center;"></div>
+
             </div>
           </div>
         </div>
@@ -185,7 +208,7 @@
               <div class="swiper-container testimonial-swiper" id="swipper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide testimonial-box yellow">
-                    <h1>ERP System</h1>
+                    <h1 class="title">ERP System</h1>
                     <p>System for Coordinating Between Multiple Companies and Within the Company Itself"
                       <br>- User, Role, and Division Management
                       <br>- Services Management
@@ -198,7 +221,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide testimonial-box purple">
-                    <h1>E-commerce with a High Volume of Products</h1>
+                    <h1 class="title">E-commerce with a High Volume of Products</h1>
                     <p>Multi-vendor E-commerce with Over 25 Million Products
                       <br>- Online Payment
                       <br>- Automated Transactions Between the Company and Merchants When Service is Claimed
@@ -210,7 +233,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide testimonial-box blue">
-                    <h1>HR Portal</h1>
+                    <h1 class="title">HR Portal</h1>
                     <p>- Design , develop HR Portal Using Laravel Framework and AJAX with Complete HR Functionality Like as : calculate work hours, overtimes, late times, work days, and holidays, with multi and different shifts work.
                       <br>- Deployed application in production and it's currently used to mange over 300 employees</p>
                     <div class="text-right">
@@ -218,7 +241,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide testimonial-box yellow">
-                    <h1>Main Contractor Portal</h1>
+                    <h1 class="title">Main Contractor Portal</h1>
                     <p>ERP system with normal Data (Laravel Framework, AJAX, MySQL), Done in 1 month
                       Creating Projects, Subcontractors, Materials Suppliers, Materials Rental Companies, calculate and follow all Financial Statement for each mentioned above, calculate Other petty cash expenses of the company, Employees’ Salaries, Company’s Annual Rental, Telecom, and SEWA Bills, issuing the report with Excel format of all projects or each project separately.</p>
                     <div class="text-right">
@@ -226,7 +249,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide testimonial-box pink">
-                    <h1>Education Portal</h1>
+                    <h1 class="title">Education Portal</h1>
                     <p>- Teahers Management
                       <br> - Students Management
                       <br> - Courses Management
@@ -240,7 +263,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide testimonial-box purple">
-                    <h1>Cosmetic Orthodntics LAB</h1>
+                    <h1 class="title">Cosmetic Orthodntics LAB</h1>
                     <p>
                       Portal B to B (between Lab and doctors)
                       <br> - Patients Management
@@ -252,7 +275,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide testimonial-box blue">
-                    <h1>CRM System - Sales Team</h1>
+                    <h1 class="title">CRM System - Sales Team</h1>
                     <p>CRM (between Lab and Salesmen)
                       <br> - Doctors Management
                       <br> - Salesman Management
@@ -265,7 +288,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide testimonial-box pink">
-                    <h1>Websites & E-commerce</h1>
+                    <h1 class="title">Websites & E-commerce</h1>
                     <p><br>Over 30 Diverse Websites and E-commerce Platforms Across Various Industries</p>
                     <div class="text-right">
                       <p class="name" style="font-weight:bold">Web & Mobile Apps</p>
@@ -321,7 +344,7 @@
           <div class="row footer">
             <div class="col-md-12 text-center">
               <h1>Majd <span>Saleh</span></h1>
-              <ul class="social-links" style="margin-left:40vw">
+              <ul class="social-links footer-link" >
                 <li ><a href="mailto:majdsaleh9595@gmail.com" >
                   <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -343,6 +366,7 @@
       <script>
       var swiper1 = new Swiper('.client-swiper', {
         slidesPerView: 3,
+        pagination: '.swiper-pagination-first',
         paginationClickable: true,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
